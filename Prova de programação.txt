@@ -1,0 +1,100 @@
+import java.util.*;
+
+
+class Jogador
+{
+    private String nome;
+    private int idade;
+    private int categoria;
+    private String email;
+    
+    public Jogador()
+    {
+        nome = "";
+        email = "";
+        
+    }
+    public Jogador(String nome, int idade, int categoria, String email)
+    {
+        this.nome = nome;
+        this.idade = idade;
+        this.categoria = categoria;
+        this.email = email;
+    }
+    public String getNome()
+    {
+        return nome;
+    }
+    public int getIdade()
+    {
+        return idade;
+    }
+    public int getCategoria()
+    {
+        return categoria;
+    }
+    public String getEmail()
+    {
+        return email;
+    }
+    public void setNome(String nome)
+    {
+        this.nome = nome;
+    }
+    public void setIdade(int idade)
+    {
+        this.idade = idade;
+    }
+    public void setCategoria(int categoria)
+    {
+        this.categoria = categoria;
+    }
+    public void setEmail(String email)
+    {
+        this.email = email;
+    }
+    public void Partida()
+    {
+        categoria = categoria + 1;
+    }
+    public String toString()
+    {
+        return "Nome: " + getNome() + "\nIdade: " + getIdade() + "\nCategoria: " + getCategoria()+
+        "\nEmail: " + getEmail();
+    }
+}
+    
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner leitura = new Scanner(System.in);
+		ArrayList<Jogador> lista = new ArrayList<Jogador>();
+		System.out.print("Nome: ");
+	    String nome = leitura.next();
+        System.out.print("Idade: ");
+	    int idade = leitura.nextInt();
+	    System.out.print("Categoria: ");
+	    int categoria = leitura.nextInt();
+	    System.out.print("Email: ");
+	    String email = leitura.next();
+	    Jogador jooj = new Jogador(nome,idade,categoria,email);
+	    lista.add(jooj);
+	    int digito = 0;
+	    while(digito != 2)
+	    {   
+	        System.out.println("\n1) Inicie uma partida!");
+	        System.out.println("2) Sair\n");
+	        digito = leitura.nextInt(); 
+	        if (digito == 1)
+	        {
+	            jooj.Partida();
+	            System.out.println("Você subiu de categoria!");
+	        }
+	}
+	System.out.println("\nCHEGA\n");
+	System.out.println(jooj);
+	            
+}
+}

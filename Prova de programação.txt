@@ -70,7 +70,7 @@ public class Main
 {
 	public static void main(String[] args) {
 		Scanner leitura = new Scanner(System.in);
-		ArrayList<Jogador> lista = new ArrayList<Jogador>();
+		
 		System.out.print("Nome: ");
 	    String nome = leitura.next();
         System.out.print("Idade: ");
@@ -80,7 +80,7 @@ public class Main
 	    System.out.print("Email: ");
 	    String email = leitura.next();
 	    Jogador jooj = new Jogador(nome,idade,categoria,email);
-	    lista.add(jooj);
+	   
 	    int digito = 0;
 	    while(digito != 2)
 	    {   
